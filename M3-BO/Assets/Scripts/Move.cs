@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Move : MonoBehaviour
@@ -26,7 +27,7 @@ public class Move : MonoBehaviour
 
         if (Input.GetKey(KeyCode.S))
         {
-            //rb.AddForce(transform.back * speed * Time.deltaTime);
+            rb.AddForce(-transform.forward * speed * Time.deltaTime);
             //transform.Translate(transform.back * speed);
         }
 

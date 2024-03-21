@@ -9,6 +9,9 @@ public class Idle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+    
+        
         ani = gameObject.GetComponent<Animator>();
     }
 

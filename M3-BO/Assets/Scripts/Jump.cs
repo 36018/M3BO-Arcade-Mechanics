@@ -1,15 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Springen : MonoBehaviour
 {
-    public float jumpHeight = 7f;
+    public float jumpHeight = 20f;
     public bool isGrounded;
     private Rigidbody rb;
 
     void Start()
     {
+        
         rb = GetComponent<Rigidbody>();
     }
 
@@ -17,9 +19,9 @@ public class Springen : MonoBehaviour
     {
         if (isGrounded)
         {
-            if (Input.GetButtonDown("Jump"))
+            if (Input.GetKeyDown(KeyCode.Space) && isGrounded == true)
             {
-                rb.AddForce(Vector3.up * jumpHeight);
+                rb.AddForce(Vector3.up * jumpHeight,ForceMode.Impulse);
             }
         }
     }

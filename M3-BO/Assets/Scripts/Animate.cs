@@ -9,6 +9,7 @@ public class Animate : MonoBehaviour
 
     void Start()
     {
+        
         //Pak het animator component en sla die op in de variabele
         ani = GetComponent<Animator>();
     }
